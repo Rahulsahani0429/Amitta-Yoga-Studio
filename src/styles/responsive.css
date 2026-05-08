@@ -1,0 +1,330 @@
+@media (max-width: 1120px) {
+  h1 {
+    font-size: clamp(4rem, 9vw, 6.8rem);
+  }
+
+  h2 {
+    font-size: clamp(3rem, 7vw, 5rem);
+  }
+
+  .hero-grid,
+  .two-column,
+  .testimonial-layout,
+  .faq-layout,
+  .contact-grid {
+    gap: 48px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr 0.86fr;
+  }
+
+  .hero-visual {
+    min-height: 610px;
+  }
+
+  .classes-grid,
+  .benefit-grid,
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trainer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: min(100% - 34px, 720px);
+  }
+
+  .section-pad {
+    padding: 86px 0;
+  }
+
+  .navbar {
+    width: calc(100% - 28px);
+    min-height: 66px;
+    margin-top: 12px;
+    grid-template-columns: 1fr auto;
+  }
+
+  .nav-links,
+  .nav-cta {
+    display: none;
+  }
+
+  .mobile-toggle,
+  .mobile-menu {
+    display: grid;
+  }
+
+  .brand-mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand strong {
+    font-size: 1.25rem;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 120px;
+  }
+
+  .hero-grid,
+  .two-column,
+  .testimonial-layout,
+  .faq-layout,
+  .contact-grid,
+  .experience-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    min-height: 620px;
+  }
+
+  .hero-image-wrap {
+    inset: 0;
+  }
+
+  .hero-card-1 {
+    left: 12px;
+  }
+
+  .hero-card-2 {
+    right: 12px;
+  }
+
+  .stats-strip {
+    margin-top: 0;
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .split-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .about-collage {
+    min-height: 590px;
+  }
+
+  .experience-section,
+  .experience-content,
+  .closing-image-section,
+  .closing-image-content {
+    min-height: 650px;
+  }
+
+  .experience-card {
+    align-self: start;
+    width: min(360px, 100%);
+    margin-bottom: 0;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(100% - 28px, 520px);
+  }
+
+  .section-pad {
+    padding: 72px 0;
+  }
+
+  h1 {
+    font-size: clamp(3.5rem, 17vw, 5rem);
+  }
+
+  h2 {
+    font-size: clamp(2.8rem, 14vw, 4rem);
+  }
+
+  h3 {
+    font-size: 1.7rem;
+  }
+
+  p {
+    font-size: 0.96rem;
+  }
+
+  .hero-actions,
+  .hero-actions .btn,
+  .section-heading .btn {
+    width: 100%;
+  }
+
+  .hero-note {
+    align-items: start;
+  }
+
+  .hero-note span {
+    width: 38px;
+    margin-top: 12px;
+    flex: 0 0 auto;
+  }
+
+  .hero-visual {
+    min-height: 540px;
+  }
+
+  .hero-image-wrap {
+    border-radius: 140px 140px 24px 24px;
+  }
+
+  .hero-floating-card {
+    min-height: 48px;
+    padding: 9px 12px;
+    font-size: 0.75rem;
+  }
+
+  .hero-card-2 {
+    bottom: 22%;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+  .stats-container,
+  .classes-grid,
+  .trainer-grid,
+  .benefit-grid,
+  .pricing-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    min-height: 132px;
+  }
+
+  .about-collage {
+    min-height: 510px;
+  }
+
+  .about-img-main {
+    width: 78%;
+    height: 450px;
+    border-radius: 120px 120px 20px 20px;
+  }
+
+  .about-img-small {
+    width: 54%;
+    height: 250px;
+    border-width: 7px;
+  }
+
+  .collage-badge {
+    right: 3%;
+    top: 34px;
+    width: 132px;
+    height: 132px;
+  }
+
+  .feature-list {
+    grid-template-columns: 1fr;
+  }
+
+  .class-card,
+  .class-card img {
+    min-height: 390px;
+  }
+
+  .experience-section,
+  .experience-content,
+  .closing-image-section,
+  .closing-image-content {
+    min-height: 600px;
+  }
+
+  .closing-copy {
+    padding: 48px 0;
+  }
+
+  .closing-image-overlay {
+    background:
+      radial-gradient(circle at 80% 30%, rgba(200, 164, 107, 0.18), transparent 20rem),
+      linear-gradient(90deg, rgba(26, 26, 26, 0.86), rgba(26, 26, 26, 0.58)),
+      linear-gradient(180deg, rgba(26, 26, 26, 0.14), rgba(26, 26, 26, 0.7));
+  }
+
+  .play-button {
+    width: 74px;
+    height: 74px;
+  }
+
+  .trainer-image {
+    height: 390px;
+  }
+
+  .benefit-card,
+  .pricing-card,
+  .testimonial-card {
+    padding: 24px;
+  }
+
+  .testimonial-card {
+    min-height: 390px;
+  }
+
+  .price {
+    font-size: 3.2rem;
+  }
+
+  .faq-item button {
+    min-height: 70px;
+    padding: 0 18px;
+  }
+
+  .map-card {
+    min-height: 180px;
+  }
+
+  .mobile-menu-inner a {
+    font-size: clamp(2.5rem, 15vw, 4rem);
+  }
+}
+
+@media (max-width: 430px) {
+  .hero-floating-card {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    margin: 8px 0 0 10px;
+    width: fit-content;
+  }
+
+  .hero-visual {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    padding-top: 430px;
+  }
+
+  .hero-image-wrap {
+    height: 410px;
+  }
+
+  .hero-card-2 {
+    align-self: end;
+    margin-right: 10px;
+  }
+}
