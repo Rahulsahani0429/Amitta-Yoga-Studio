@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap");
 
 :root {
-  --bg-main: #F7F2EB;
-  --dark: #1A1A1A;
-  --gold: #C8A46B;
-  --sage: #6D7D68;
-  --brown: #8B5E3C;
-  --white: #FFFFFF;
+  --bg-main: #f7f2eb;
+  --dark: #1a1a1a;
+  --gold: #c8a46b;
+  --sage: #6d7d68;
+  --brown: #8b5e3c;
+  --white: #ffffff;
   --font-heading: "Cormorant Garamond", serif;
   --font-body: "Inter", sans-serif;
-  --cream-deep: #EEE5D9;
-  --cream-soft: #FBF8F1;
-  --ink-muted: #5E554C;
+  --cream-deep: #eee5d9;
+  --cream-soft: #fbf8f1;
+  --ink-muted: #5e554c;
   --line: rgba(26, 26, 26, 0.11);
   --gold-soft: rgba(200, 164, 107, 0.22);
   --sage-soft: rgba(109, 125, 104, 0.14);
@@ -33,8 +33,12 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at top left, rgba(200, 164, 107, 0.16), transparent 34rem),
-    linear-gradient(180deg, var(--bg-main), #F3ECE0 46%, var(--bg-main));
+    radial-gradient(
+      circle at top left,
+      rgba(200, 164, 107, 0.16),
+      transparent 34rem
+    ),
+    linear-gradient(180deg, var(--bg-main), #f3ece0 46%, var(--bg-main));
   color: var(--dark);
   font-family: var(--font-body);
   overflow-x: hidden;
@@ -45,7 +49,8 @@ body.menu-open {
   overflow: hidden;
 }
 
-img, video {
+img,
+video {
   display: block;
   max-width: 100%;
   height: auto;
@@ -111,7 +116,7 @@ h3 {
 
 h1 {
   max-width: 680px;
-  font-size: clamp(32px, 8vw, 110px);
+  font-size: clamp(32px, 8vw, 60px);
 }
 
 h2 {
@@ -139,7 +144,11 @@ p {
   border: 1px solid transparent;
   border-radius: 999px;
   font-weight: 700;
-  transition: transform 0.28s ease, box-shadow 0.28s ease, background 0.28s ease, color 0.28s ease;
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    background 0.28s ease,
+    color 0.28s ease;
 }
 
 .btn:hover {
@@ -147,7 +156,7 @@ p {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--gold), #E4C990);
+  background: linear-gradient(135deg, var(--gold), #e4c990);
   color: var(--dark);
   box-shadow: 0 16px 36px rgba(139, 94, 60, 0.22);
 }
@@ -169,7 +178,11 @@ p {
 }
 
 .glass-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.24),
+    rgba(255, 255, 255, 0.1)
+  );
   border: 1px solid rgba(255, 255, 255, 0.35);
   box-shadow: var(--shadow-deep);
   backdrop-filter: blur(18px);

@@ -1,41 +1,44 @@
-import TopBar from "./components/TopBar.jsx";
-import Navbar from "./components/Navbar.jsx";
-import Hero from "./components/Hero.jsx";
-import StatsStrip from "./components/StatsStrip.jsx";
-import About from "./components/About.jsx";
-import Classes from "./components/Classes.jsx";
-import Experience from "./components/Experience.jsx";
-import Trainers from "./components/Trainers.jsx";
-import Benefits from "./components/Benefits.jsx";
-import Testimonials from "./components/Testimonials.jsx";
-import Pricing from "./components/Pricing.jsx";
-import FAQ from "./components/FAQ.jsx";
-import Contact from "./components/Contact.jsx";
-import ClosingImage from "./components/ClosingImage.jsx";
-import Footer from "./components/Footer.jsx";
-import WhatsAppButton from "./components/WhatsAppButton.jsx";
+import { BrowserRouter, useLocation } from "./router/SimpleRouter.jsx";
+import Layout from "./components/Layout.jsx";
+import HomePage from "./pages/HomePage.jsx";
+import AboutPage from "./pages/AboutPage.jsx";
+import ServicesPage from "./pages/ServicesPage.jsx";
+import ClassesPage from "./pages/ClassesPage.jsx";
+import TrainersPage from "./pages/TrainersPage.jsx";
+import PricingPage from "./pages/PricingPage.jsx";
+import GalleryPage from "./pages/GalleryPage.jsx";
+import TestimonialsPage from "./pages/TestimonialsPage.jsx";
+import BlogPage from "./pages/BlogPage.jsx";
+import ContactPage from "./pages/ContactPage.jsx";
+
+const routes = {
+  "/": HomePage,
+  "/about": AboutPage,
+  "/services": ServicesPage,
+  "/classes": ClassesPage,
+  "/trainers": TrainersPage,
+  "/pricing": PricingPage,
+  "/gallery": GalleryPage,
+  "/testimonials": TestimonialsPage,
+  "/blog": BlogPage,
+  "/contact": ContactPage
+};
+
+function RoutedSite() {
+  const { pathname } = useLocation();
+  const Page = routes[pathname] || HomePage;
+
+  return (
+    <Layout>
+      <Page />
+    </Layout>
+  );
+}
 
 export default function App() {
   return (
-    <>
-      <TopBar />
-      <Navbar />
-      <main>
-        <Hero />
-        <StatsStrip />
-        <About />
-        <Classes />
-        <Experience />
-        <Trainers />
-        <Benefits />
-        <Testimonials />
-        <Pricing />
-        <FAQ />
-        <Contact />
-        <ClosingImage />
-      </main>
-      <Footer />
-      <WhatsAppButton />
-    </>
+    <BrowserRouter>
+      <RoutedSite />
+    </BrowserRouter>
   );
 }

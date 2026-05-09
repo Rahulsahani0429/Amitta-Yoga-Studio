@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "../router/SimpleRouter.jsx";
 import { ArrowRight, Flame, Moon, SunMedium } from "lucide-react";
 
 const rituals = [
@@ -41,10 +42,10 @@ export default function ClosingImage() {
               );
             })}
           </div>
-          <a className="btn btn-primary" href="#contact">
+          <Link className="btn btn-primary" to="/contact">
             Book a Free Trial
             <ArrowRight size={18} />
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

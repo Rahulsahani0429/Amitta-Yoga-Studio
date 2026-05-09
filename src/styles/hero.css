@@ -2,12 +2,12 @@
 .hero-fullscreen {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 92vh;
   display: flex;
-  align-items: stretch;
+  align-items: center;
   overflow: hidden;
-  padding-top: 100px;
-  padding-bottom: 24px;
+  padding-top: 142px;
+  padding-bottom: 112px;
 }
 
 .hero-slider-bg {
@@ -43,19 +43,17 @@
   position: relative;
   z-index: 2;
   width: 100%;
-  height: 100%;
-  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding-top: 4vh;
+  justify-content: center;
+  min-height: calc(92vh - 254px);
+  padding-top: 0;
 }
 
 .hero-main-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex: 1;
   width: 100%;
   gap: 40px;
 }
@@ -202,9 +200,10 @@
 
 .hero-features-section {
   position: relative;
-  z-index: 10;
-  margin-top: -100px;
-  padding-bottom: 32px;
+  z-index: 2;
+  margin-top: 34px;
+  margin-bottom: 46px;
+  padding-bottom: 0;
 }
 
 .bottom-neumorphic-strip {
@@ -216,7 +215,7 @@
   border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: 28px;
   padding: 24px 30px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05), inset 0 5px 15px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 22px 58px rgba(82, 59, 39, 0.12), inset 0 5px 15px rgba(255, 255, 255, 0.8);
 }
 
 .strip-item {
@@ -256,14 +255,15 @@
 
 @media (max-width: 992px) {
   .hero-features-section {
-    margin-top: 32px;
+    margin-top: 28px;
+    margin-bottom: 38px;
   }
 
   .hero-main-content {
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
-    padding-top: 20px;
+    padding-top: 0;
   }
 
   .hero-bg-overlay {
@@ -305,19 +305,19 @@
   .hero-fullscreen {
     display: flex;
     flex-direction: column;
-    padding-top: 0;
     min-height: auto;
-    padding-bottom: 0;
+    padding-top: 104px;
+    padding-bottom: 56px;
     align-items: stretch;
   }
 
   .hero-slider-bg {
-    position: relative;
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: 60vh;
-    min-height: 400px;
-    z-index: 1;
-    inset: auto;
+    height: 100%;
+    min-height: 0;
+    z-index: 0;
   }
 
   .hero-content-container {
@@ -325,15 +325,18 @@
     z-index: 2;
     padding-top: 0;
     margin-top: 0;
-    height: auto;
-    flex: none;
+    min-height: auto;
   }
 
   .hero-main-content {
-    background: var(--bg-main, #F7F2EB);
-    padding: 30px 0 20px;
+    background: rgba(247, 242, 235, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 28px;
+    padding: 34px 18px;
     justify-content: flex-start;
     gap: 30px;
+    box-shadow: 0 18px 48px rgba(82, 59, 39, 0.12);
+    backdrop-filter: blur(14px);
   }
 
   .hero-title {
@@ -389,7 +392,7 @@
   }
 
   .bottom-neumorphic-strip {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     padding: 20px;
   }
@@ -400,6 +403,11 @@
 }
 
 @media (max-width: 576px) {
+  .hero-fullscreen {
+    padding-top: 96px;
+    padding-bottom: 48px;
+  }
+
   .hero-actions-new {
     flex-direction: column;
     gap: 16px;
@@ -409,6 +417,19 @@
   .btn-book-now {
     width: 100%;
     justify-content: center;
+  }
+
+  .hero-features-section {
+    margin-top: 22px;
+    margin-bottom: 34px;
+  }
+
+  .bottom-neumorphic-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .strip-item {
+    padding: 8px;
   }
 }
 
