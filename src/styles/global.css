@@ -38,15 +38,18 @@ body {
   color: var(--dark);
   font-family: var(--font-body);
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 body.menu-open {
   overflow: hidden;
 }
 
-img {
+img, video {
   display: block;
   max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 a {
@@ -108,21 +111,21 @@ h3 {
 
 h1 {
   max-width: 680px;
-  font-size: clamp(4rem, 8vw, 8.4rem);
+  font-size: clamp(32px, 8vw, 110px);
 }
 
 h2 {
   max-width: 760px;
-  font-size: clamp(3rem, 5.6vw, 6rem);
+  font-size: clamp(28px, 5.6vw, 72px);
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: clamp(24px, 4vw, 32px);
 }
 
 p {
   color: var(--ink-muted);
-  font-size: 1rem;
+  font-size: clamp(16px, 2vw, 18px);
   line-height: 1.8;
 }
 

@@ -27,6 +27,7 @@ export default function Navbar() {
   }, [open]);
 
   return (
+    <>
     <motion.header
       className={`navbar ${scrolled ? "navbar-solid" : ""}`}
       initial={{ y: -80, opacity: 0 }}
@@ -64,36 +65,46 @@ export default function Navbar() {
       >
         {open ? <X size={24} /> : <Menu size={24} />}
       </button>
-
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            className="mobile-menu"
-            initial={{ opacity: 0, clipPath: "circle(0% at 88% 8%)" }}
-            animate={{ opacity: 1, clipPath: "circle(140% at 88% 8%)" }}
-            exit={{ opacity: 0, clipPath: "circle(0% at 88% 8%)" }}
-            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <div className="mobile-menu-inner">
-              {navLinks.map((link, index) => (
-                <motion.a
-                  href={link.href}
-                  key={link.href}
-                  onClick={() => setOpen(false)}
-                  initial={{ y: 24, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.08 * index, duration: 0.4 }}
-                >
-                  {link.label}
-                </motion.a>
-              ))}
-              <a className="mobile-menu-cta" href="#contact" onClick={() => setOpen(false)}>
-                Book A Free Trial
-              </a>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </motion.header>
+
+    <AnimatePresence>
+      {open && (
+        <motion.div
+          className="mobile-menu"
+          initial={{ opacity: 0, clipPath: "circle(0% at 88% 8%)" }}
+          animate={{ opacity: 1, clipPath: "circle(140% at 88% 8%)" }}
+          exit={{ opacity: 0, clipPath: "circle(0% at 88% 8%)" }}
+          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          style={{ zIndex: 999 }}
+        >
+          <div className="mobile-menu-inner">
+            {navLinks.map((link, index) => (
+              <motion.a
+                href={link.href}
+                key={link.href}
+                onClick={() => setOpen(false)}
+                initial={{ y: 24, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.08 * index, duration: 0.4 }}
+              >
+                {link.label}
+              </motion.a>
+            ))}
+            <a className="mobile-menu-cta" href="#contact" onClick={() => setOpen(false)}>
+              Book A Free Trial
+            </a>
+          </div>
+          
+          <button
+            className="mobile-toggle"
+            style={{ position: 'fixed', top: '18px', right: '16px', zIndex: 1000, display: 'grid' }}
+            onClick={() => setOpen(false)}
+          >
+            <X size={24} />
+          </button>
+        </motion.div>
+      )}
+    </AnimatePresence>
+    </>
   );
 }

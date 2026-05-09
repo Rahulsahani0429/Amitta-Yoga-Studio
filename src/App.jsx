@@ -1,3 +1,4 @@
+import TopBar from "./components/TopBar.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import StatsStrip from "./components/StatsStrip.jsx";
@@ -12,10 +13,12 @@ import FAQ from "./components/FAQ.jsx";
 import Contact from "./components/Contact.jsx";
 import ClosingImage from "./components/ClosingImage.jsx";
 import Footer from "./components/Footer.jsx";
+import WhatsAppButton from "./components/WhatsAppButton.jsx";
 
 export default function App() {
   return (
     <>
+      <TopBar />
       <Navbar />
       <main>
         <Hero />
@@ -32,6 +35,7 @@ export default function App() {
         <ClosingImage />
       </main>
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }

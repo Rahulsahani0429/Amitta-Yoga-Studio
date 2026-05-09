@@ -27,6 +27,7 @@ export default function Hero() {
   }, []);
 
   return (
+    <>
     <section className="hero-fullscreen" id="home">
       <div className="hero-slider-bg">
         <AnimatePresence>
@@ -134,28 +135,31 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        <motion.div
-          className="bottom-neumorphic-strip"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
-        >
-          {featureCards.map((card, idx) => {
-            const Icon = card.icon;
-            return (
-              <div key={idx} className="strip-item">
-                <div className="strip-icon-wrap">
-                  <Icon size={22} />
-                </div>
-                <div className="strip-text">
-                  <h6>{card.title}</h6>
-                  <span>{card.desc}</span>
-                </div>
-              </div>
-            );
-          })}
-        </motion.div>
       </div>
     </section>
+    <section className="hero-features-section container">
+      <motion.div
+        className="bottom-neumorphic-strip"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
+      >
+        {featureCards.map((card, idx) => {
+          const Icon = card.icon;
+          return (
+            <div key={idx} className="strip-item">
+              <div className="strip-icon-wrap">
+                <Icon size={22} />
+              </div>
+              <div className="strip-text">
+                <h6>{card.title}</h6>
+                <span>{card.desc}</span>
+              </div>
+            </div>
+          );
+        })}
+      </motion.div>
+    </section>
+    </>
   );
 }
